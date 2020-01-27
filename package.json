@@ -1,0 +1,38 @@
+{
+	"name": "snippet-shortcut-binder",
+	"displayName": "snippet-shortcut-binder",
+	"description": "Create a snippet and link it to a shortcut.",
+	"repository": "https://github.com/im-barry/vsc-shortcut-binder",
+	"version": "0.0.1",
+	"publisher": "brother-impact",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.ssbConsolelog"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.ssbConsolelog",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	}
+}
